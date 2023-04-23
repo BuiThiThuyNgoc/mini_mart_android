@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+    <com.google.android.material.navigation.NavigationView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:headerLayout="@layout/search"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_infor"
+            android:text="Thông tin cá nhân "
+            android:textColor="@color/black"
+            android:background="@color/white"
+            android:textSize="15dp"
+            android:layout_gravity="left"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_phone"
+            android:layout_marginTop="10dp"
+            android:text="Để xem 'Tài Khoản' vui lòng nhập số điện thoại mua hàng"
+            android:textColor="@color/black"
+            android:background="@color/white"
+            android:textSize="15dp"
+            android:layout_gravity="left"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/edt_tphone"
+            android:hint="Phone Number"
+            android:textColorHint="@color/Gray"
+            android:textColor="@color/black"
+            android:layout_margin="10dp"
+            android:padding="20dp"
+            android:drawablePadding="20dp"/>
+
+    </LinearLayout>
+
+</LinearLayout>
