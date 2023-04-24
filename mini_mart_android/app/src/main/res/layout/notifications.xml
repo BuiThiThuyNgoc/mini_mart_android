@@ -12,7 +12,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="660dp"
-        android:background="@drawable/backgroud5"
+        android:background="@drawable/backgroud6"
         android:orientation="vertical">
 
         <ImageView
@@ -20,7 +20,7 @@
             android:layout_height="210dp"
             android:layout_gravity="center"
             android:layout_marginLeft="22dp"
-            android:layout_marginTop="160dp"
+            android:layout_marginTop="100dp"
             android:layout_marginRight="25dp"
             android:src="@drawable/notification" />
 
