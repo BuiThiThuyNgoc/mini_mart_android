@@ -1,4 +1,4 @@
-package com.example.mini_mart_android;
+package com.example.mini_mart_android.model;
 
 public class Category {
     //private int imgID;
