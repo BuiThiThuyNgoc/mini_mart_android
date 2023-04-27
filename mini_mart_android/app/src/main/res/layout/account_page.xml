@@ -7,7 +7,7 @@
     <com.google.android.material.navigation.NavigationView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:headerLayout="@layout/search"/>
+        app:headerLayout="@layout/nav_search"/>
     <LinearLayout
         android:layout_width="380dp"
         android:layout_height="wrap_content"
@@ -22,6 +22,7 @@
             android:gravity="center"
             android:background="@color/SpringGreen4"/>
         <TextView
+            android:layout_marginTop="5dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Để xem 'Tài Khoản'vui lòng nhập số điện thoại mua hàng"

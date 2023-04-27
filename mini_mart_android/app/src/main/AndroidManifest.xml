@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools">
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:custom="http://schemas.android.com/apk/res-auto">
 
     <application
         android:allowBackup="true"
@@ -11,6 +12,11 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Mini_mart_android"
         tools:targetApi="31">
+        <activity>
+            <meta-data
+                android:name="com.makeramen.roundedimageview.RoundedImageView"
+                android:value="com.example.mini_mart_android.RoundedImageView" />
+        </activity>
         <activity
             android:name=".MainActivity"
             android:exported="true">

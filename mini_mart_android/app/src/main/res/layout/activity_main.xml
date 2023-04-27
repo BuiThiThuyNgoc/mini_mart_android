@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:id="@+id/srv"
     tools:context=".MainActivity">
     <LinearLayout
         android:layout_width="match_parent"
@@ -70,9 +71,11 @@
             android:id="@+id/nav_view2"
             android:layout_width="match_parent"
             android:layout_height="58dp"
-            app:headerLayout="@layout/search" />
-
-
+            app:headerLayout="@layout/nav_search" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="2">
             <TextView
                 android:id="@+id/textView2"
                 android:layout_width="wrap_content"
@@ -85,6 +88,18 @@
                 android:textSize="16sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/editText" />
+            <TextView
+                android:textColor="@color/SpringGreen4"
+                android:text="See"
+                android:id="@+id/viewdDiscountedItems"
+                android:layout_marginRight="7dp"
+                android:layout_marginStart="180dp"
+                android:textSize="@dimen/text_size_button"
+                android:layout_marginTop="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/discountedRecycler"
@@ -94,8 +109,10 @@
                 android:layout_marginBottom="10dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView2" />
-
-
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="2">
             <TextView
                 android:id="@+id/textView4"
                 android:layout_width="wrap_content"
@@ -107,6 +124,20 @@
                 android:textStyle="bold"
                 android:textSize="16sp"
                 app:layout_constraintStart_toStartOf="parent" />
+            <TextView
+                android:textColor="@color/SpringGreen4"
+                android:text="See"
+                android:id="@+id/viewAllCategory"
+                android:layout_marginRight="7dp"
+                android:layout_marginStart="210dp"
+                android:textSize="@dimen/text_size_button"
+                android:layout_marginTop="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+
+        </LinearLayout>
+
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/categoryRecycler"
@@ -144,4 +175,4 @@
 
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
