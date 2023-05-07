@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:tools="http://schemas.android.com/tools"
-    tools:context=".product_detail_page">
-
+    tools:context=".ProductDetailPage">
     <ImageView
         android:id="@+id/cart"
         android:layout_width="wrap_content"
@@ -133,7 +132,9 @@
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="96dp"
+        android:layout_marginStart="88dp"
+        android:background="@drawable/bg_nav_add_cart"
+        android:gravity="center_vertical"
         android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="@+id/prodPrice"
         app:layout_constraintStart_toEndOf="@+id/prodPrice"
@@ -141,29 +142,28 @@
         app:layout_constraintVertical_bias="1.0">
 
         <ImageView
-            android:id="@+id/minusProductQuantity"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="16dp"
-            android:background="@color/DarkSeaGreen1"
-            app:srcCompat="@drawable/ic_remove" />
+            android:id="@+id/img_nav_cat_minus"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:src="@drawable/ic_remove" />
 
         <TextView
-            android:id="@+id/quantityPurchased"
-            android:layout_width="wrap_content"
+            android:id="@+id/tv_nav_cat_TotalQuantity"
+            android:layout_width="20dp"
             android:layout_height="wrap_content"
-            android:text="số"
-            android:textSize="15sp" />
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:gravity="center_horizontal"
+            android:text="1"
+            android:textColor="@color/black"
+            android:textSize="17dp"
+            android:textStyle="bold" />
 
         <ImageView
-            android:id="@+id/addProductQuantity"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:background="@color/DarkSeaGreen1"
-            app:srcCompat="@drawable/ic_add" />
-
-
+            android:id="@+id/img_nav_cat_plus"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:src="@drawable/ic_add" />
     </LinearLayout>
 
 
