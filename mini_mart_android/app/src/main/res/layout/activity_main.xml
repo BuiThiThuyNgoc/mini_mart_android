@@ -61,7 +61,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginRight="25dp"
-                        android:text="MiniMart"
+                        android:text="@string/minimart"
                         android:textColor="@color/SpringGreen4"
                         android:textSize="30dp"
                         android:textStyle="bold"
@@ -87,7 +87,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="16dp"
                     android:layout_marginTop="5dp"
-                    android:text="Top Discounted Items"
+                    android:text="@string/top_discounted_items"
                     android:textColor="@color/SpringGreen4"
                     android:textStyle="bold"
                     android:textSize="16sp"
@@ -95,7 +95,7 @@
                     app:layout_constraintTop_toBottomOf="@+id/editText" />
                 <TextView
                     android:textColor="@color/SpringGreen4"
-                    android:text="See"
+                    android:text="@string/see"
                     android:id="@+id/viewdDiscountedItems"
                     android:layout_marginRight="7dp"
                     android:layout_marginStart="180dp"
@@ -124,14 +124,14 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="16dp"
                     android:layout_marginTop="2dp"
-                    android:text="Select Categories"
+                    android:text="@string/select_category"
                     android:textColor="@color/SpringGreen4"
                     android:textStyle="bold"
                     android:textSize="16sp"
                     app:layout_constraintStart_toStartOf="parent" />
                 <TextView
                     android:textColor="@color/SpringGreen4"
-                    android:text="See"
+                    android:text="@string/see"
                     android:id="@+id/viewAllCategory"
                     android:layout_marginRight="7dp"
                     android:layout_marginStart="210dp"
@@ -159,7 +159,7 @@
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="2dp"
                 android:textColor="@color/SpringGreen4"
-                android:text="Recently Viewed Items"
+                android:text="@string/recently_viewed_items"
                 android:textStyle="bold"
                 android:textSize="16sp"
                 app:layout_constraintStart_toStartOf="parent"
@@ -175,13 +175,10 @@
                 app:layout_constraintTop_toBottomOf="@+id/textView5" />
 
 
-
-
         </LinearLayout>
     </androidx.core.widget.NestedScrollView>
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottomBar"
-
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
