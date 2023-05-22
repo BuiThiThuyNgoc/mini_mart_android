@@ -88,6 +88,10 @@
     <string name="cash_for_goods">Tiền hàng</string>
     <string name="total_amount">Tổng tiền</string>
 
+
+    //product page
+    <string name="select_products">Select Products</string>
+
     //product detail page
     <string name="product_details">Product Details</string>
     <string name="product_name">Product name</string>
