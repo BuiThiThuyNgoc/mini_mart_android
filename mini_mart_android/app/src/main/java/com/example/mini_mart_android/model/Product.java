@@ -1,53 +1,35 @@
 package com.example.mini_mart_android.model;
 
-import androidx.annotation.NonNull;
-import androidx.room.Entity;
-import androidx.room.PrimaryKey;
-
 import java.io.Serializable;
-import java.util.List;
 
-@Entity(tableName = "product")
 public class Product implements Serializable {
-    @PrimaryKey
-    @NonNull
-    private String _id;
+
+    private String id;
     private String name;
-    private int price;
-    private int sale;
-    private int quantity;
-    private String image;
     private String description;
-    private String category;
-    private int count;
-    private int totalPrice;
+    private String urlImage;
+    private int price;
+    private String categoryId;
+    private String createdAt;
+    private String updatedAt;
 
-    public Product(@NonNull String _id, String name, int price, int sale, int quantity, String image, String description, String category, int count, int totalPrice) {
-        this._id = _id;
+    public Product(String id, String name, String description, String urlImage, int price, String categoryId, String createdAt, String updatedAt) {
+        this.id = id;
         this.name = name;
-        this.price = price;
-        this.sale = sale;
-        this.quantity = quantity;
-        this.image = image;
         this.description = description;
-        this.category = category;
-        this.count = count;
-        this.totalPrice = totalPrice;
+        this.urlImage = urlImage;
+        this.price = price;
+        this.categoryId = categoryId;
+        this.createdAt = createdAt;
+        this.updatedAt = updatedAt;
     }
 
-    public int getRealPrice() {
-        if (sale <= 0) {
-            return price;
-        }
-        return price - (price * sale / 100);
+    public String getId() {
+        return id;
     }
 
-    public String get_id() {
-        return _id;
-    }
-
-    public void set_id(String _id) {
-        this._id = _id;
+    public void setId(String id) {
+        this.id = id;
     }
 
     public String getName() {
@@ -58,38 +40,6 @@ public class Product implements Serializable {
         this.name = name;
     }
 
-    public int getPrice() {
-        return price;
-    }
-
-    public void setPrice(int price) {
-        this.price = price;
-    }
-
-    public int getSale() {
-        return sale;
-    }
-
-    public void setSale(int sale) {
-        this.sale = sale;
-    }
-
-    public int getQuantity() {
-        return quantity;
-    }
-
-    public void setQuantity(int quantity) {
-        this.quantity = quantity;
-    }
-
-    public String getImage() {
-        return image;
-    }
-
-    public void setImage(String image) {
-        this.image = image;
-    }
-
     public String getDescription() {
         return description;
     }
@@ -98,27 +48,43 @@ public class Product implements Serializable {
         this.description = description;
     }
 
-    public String getCategory() {
-        return category;
+    public String getUrlImage() {
+        return urlImage;
     }
 
-    public void setCategory(String category) {
-        this.category = category;
+    public void setUrlImage(String urlImage) {
+        this.urlImage = urlImage;
     }
 
-    public int getCount() {
-        return count;
+    public int getPrice() {
+        return price;
     }
 
-    public void setCount(int count) {
-        this.count = count;
+    public void setPrice(int price) {
+        this.price = price;
     }
 
-    public int getTotalPrice() {
-        return totalPrice;
+    public String getCategoryId() {
+        return categoryId;
     }
 
-    public void setTotalPrice(int totalPrice) {
-        this.totalPrice = totalPrice;
+    public void setCategoryId(String categoryId) {
+        this.categoryId = categoryId;
+    }
+
+    public String getCreatedAt() {
+        return createdAt;
+    }
+
+    public void setCreatedAt(String createdAt) {
+        this.createdAt = createdAt;
+    }
+
+    public String getUpdatedAt() {
+        return updatedAt;
+    }
+
+    public void setUpdatedAt(String updatedAt) {
+        this.updatedAt = updatedAt;
     }
 }

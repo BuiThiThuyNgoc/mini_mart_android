@@ -22,6 +22,6 @@ public interface CallApi {
             .create(CallApi.class);
 
 
-    @GET("api/v1/categories")
-    Call<List<Product>> call(@Query("product") String products);
+    @GET("api/v1/products")
+    Call<List<Product>> callProducts(@Query("product") String products);
 }

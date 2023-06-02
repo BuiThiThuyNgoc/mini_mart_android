@@ -13,7 +13,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.mini_mart_android.R;
 import com.example.mini_mart_android.model.Category;
 import java.util.List;
-
+import android.net.Uri;
 
 public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.CategoryViewHolder> {
     private Context context;
@@ -31,7 +31,7 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.Catego
     @NonNull
     @Override
     public CategoryViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.activity_category_page, parent, false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_discount, parent, false);
 
         return new CategoryViewHolder(view);
     }
@@ -42,8 +42,10 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.Catego
         if (category == null) {
             return;
         }
-        //holder.imageView.setImageResource(category.getImgID());
-        holder.textView.setText(category.getName());
+        holder.tv_namecategory.setText(category.getName());
+        Uri imageUri = Uri.parse(category.getUrlImage());
+        holder.img_category.setImageURI(imageUri);
+        holder.tv_description.setText(category.getDescription());
     }
 
     @Override
@@ -57,14 +59,16 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.Catego
 
     public class CategoryViewHolder extends RecyclerView.ViewHolder{
 
-        private ImageView imageView;
-        private TextView textView;
+        private ImageView img_category;
+        private TextView tv_namecategory, tv_description;
 
         public CategoryViewHolder(@NonNull View itemView) {
             super(itemView);
 
-            imageView = itemView.findViewById(R.id.img);
-            textView = itemView.findViewById(R.id.tv);
+            img_category = itemView.findViewById(R.id.img_pop);
+            tv_namecategory = itemView.findViewById(R.id.tv_pop_name);
+            tv_description = itemView.findViewById(R.id.tv_pop_des);
+
         }
     }
 }

@@ -1,6 +1,7 @@
 package com.example.mini_mart_android.Adapter;
 
 import android.content.Context;
+import android.net.Uri;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -21,18 +22,15 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ProductV
     private List<Product> productList;
     public ClickItemListener clickItemListener;
 
-    public ProductAdapter(Context context) {
-        this.context = context;
+    public ProductAdapter(List<Product> productList) {
+        this.productList = productList;
     }
 
-    public void setData(List<Product> list) {
-        this.productList = list;
-        notifyDataSetChanged();
-}
+
     @NonNull
     @Override
     public ProductViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.activity_product_page, parent, false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_view_all, parent, false);
 
         return new ProductViewHolder(view);
     }
@@ -43,10 +41,10 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ProductV
         if (product == null) {
             return;
         }
-        holder.imageView.setImageResource(product.get_id());
         holder.textView.setText(product.getName());
-    }
+        holder.textView2.setText(String.valueOf(product.getPrice()));
 
+    }
     @Override
     public int getItemCount() {
         if (productList != null) {
@@ -59,13 +57,15 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ProductV
     public class ProductViewHolder extends RecyclerView.ViewHolder{
 
         private ImageView imageView;
-        private TextView textView;
+        private TextView textView, textView2, textView3;
 
         public ProductViewHolder(@NonNull View itemView) {
             super(itemView);
 
-            imageView = itemView.findViewById(R.id.img);
-            textView = itemView.findViewById(R.id.tv);
+            imageView = itemView.findViewById(R.id.imgAllProduct);
+            textView = itemView.findViewById(R.id.tvAllProductName);
+            textView2 = itemView.findViewById(R.id.price_allProduct);
+            textView3 = itemView.findViewById(R.id.price_1_allProduct);
         }
     }
 }
