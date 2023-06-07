@@ -1,5 +1,6 @@
 package com.example.mini_mart_android.database;
 
+import com.example.mini_mart_android.model.Category;
 import com.example.mini_mart_android.model.Product;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -24,4 +25,6 @@ public interface CallApi {
 
     @GET("api/v1/products")
     Call<List<Product>> callProducts(@Query("product") String products);
+    @GET("api/v1/categories")
+    Call<List<Category>> callCategories(@Query("categories") String categories);
 }

@@ -8,12 +8,10 @@ import androidx.viewpager2.adapter.FragmentStateAdapter;
 
 import com.example.mini_mart_android.Fragment.AccountFragment;
 import com.example.mini_mart_android.Fragment.CartFragment;
-import com.example.mini_mart_android.Fragment.NotificationFragment;
 import com.example.mini_mart_android.Fragment.ProductFragment;
-import com.example.mini_mart_android.Fragment.PromotionFragment;
 
 public class MainAdapter extends FragmentStateAdapter {
-    private static final int NUM_PAGES = 4;
+    private static final int NUM_PAGES = 3;
 
     public MainAdapter(FragmentManager fragmentManager, Lifecycle lifecycle) {
         super(fragmentManager, lifecycle);
@@ -26,10 +24,8 @@ public class MainAdapter extends FragmentStateAdapter {
             case 0:
                 return new ProductFragment();
             case 1:
-                return new PromotionFragment();
-            case 2:
                 return new CartFragment();
-            case 3:
+            case 2:
                 return new AccountFragment();
             default:
                 return null;
