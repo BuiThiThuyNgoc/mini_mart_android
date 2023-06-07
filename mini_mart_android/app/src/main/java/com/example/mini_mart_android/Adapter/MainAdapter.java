@@ -13,7 +13,7 @@ import com.example.mini_mart_android.Fragment.ProductFragment;
 import com.example.mini_mart_android.Fragment.PromotionFragment;
 
 public class MainAdapter extends FragmentStateAdapter {
-    private static final int NUM_PAGES = 5;
+    private static final int NUM_PAGES = 4;
 
     public MainAdapter(FragmentManager fragmentManager, Lifecycle lifecycle) {
         super(fragmentManager, lifecycle);
@@ -30,8 +30,6 @@ public class MainAdapter extends FragmentStateAdapter {
             case 2:
                 return new CartFragment();
             case 3:
-                return new NotificationFragment();
-            case 4:
                 return new AccountFragment();
             default:
                 return null;

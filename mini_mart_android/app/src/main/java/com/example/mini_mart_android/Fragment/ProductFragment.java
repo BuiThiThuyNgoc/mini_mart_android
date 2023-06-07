@@ -42,7 +42,6 @@ public class ProductFragment extends Fragment {
         view =  inflater.inflate(R.layout.fragment_product, container, false);
         IvSetting = view.findViewById(R.id.imgView_setting);
         imgView_cart = view.findViewById(R.id.imgView_cart);
-        recyclerView = view.findViewById(R.id.discountedRecycler);
 
         productAdapter = new ProductAdapter(productList);
         GridLayoutManager gridLayoutManager = new GridLayoutManager(getActivity(), 2);

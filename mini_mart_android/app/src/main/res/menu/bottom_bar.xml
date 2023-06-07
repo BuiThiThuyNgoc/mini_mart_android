@@ -5,17 +5,9 @@
         android:title="@string/action_product"
         android:icon="@drawable/ic_product"/>
 
-    <item android:id="@+id/action_promotion"
-        android:title="@string/action_promotion"
-        android:icon="@drawable/ic_promotion"/>
-
     <item android:id="@+id/action_shoppingCart"
         android:title="@string/action_shoppingCart"
         android:icon="@drawable/ic_shopping_cart"/>
-
-    <item android:id="@+id/action_notification"
-        android:title="@string/action_notification"
-        android:icon="@drawable/ic_notification"/>
 
     <item android:id="@+id/action_account"
         android:title="@string/action_account"

@@ -41,8 +41,8 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ProductV
         if (product == null) {
             return;
         }
-        holder.textView.setText(product.getName());
-        holder.textView2.setText(String.valueOf(product.getPrice()));
+        holder.tv_productname.setText(product.getName());
+        holder.tv_price_product.setText(String.valueOf(product.getPrice()));
 
     }
     @Override
@@ -56,16 +56,15 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ProductV
 
     public class ProductViewHolder extends RecyclerView.ViewHolder{
 
-        private ImageView imageView;
-        private TextView textView, textView2, textView3;
+        private ImageView img_product;
+        private TextView tv_productname, tv_price_product;
 
         public ProductViewHolder(@NonNull View itemView) {
             super(itemView);
 
-            imageView = itemView.findViewById(R.id.imgAllProduct);
-            textView = itemView.findViewById(R.id.tvAllProductName);
-            textView2 = itemView.findViewById(R.id.price_allProduct);
-            textView3 = itemView.findViewById(R.id.price_1_allProduct);
+            img_product = itemView.findViewById(R.id.imgAllProduct);
+            tv_productname = itemView.findViewById(R.id.tvAllProductName);
+            tv_price_product = itemView.findViewById(R.id.price_allProduct);
         }
     }
 }

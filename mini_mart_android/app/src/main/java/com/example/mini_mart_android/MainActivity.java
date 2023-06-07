@@ -51,15 +51,9 @@ public class MainActivity extends AppCompatActivity {
                         bottomNavigationView.getMenu().findItem(R.id.action_product).setChecked(true);
                         break;
                     case 1:
-                        bottomNavigationView.getMenu().findItem(R.id.action_promotion).setChecked(true);
-                        break;
-                    case 2:
                         bottomNavigationView.getMenu().findItem(R.id.action_shoppingCart).setChecked(true);
                         break;
-                    case 3:
-                        bottomNavigationView.getMenu().findItem(R.id.action_notification).setChecked(true);
-                        break;
-                    case 4:
+                    case 2:
                         bottomNavigationView.getMenu().findItem(R.id.action_account).setChecked(true);
                         break;
                 }
@@ -73,14 +67,8 @@ public class MainActivity extends AppCompatActivity {
                     case R.id.action_product:
                         viewPager.setCurrentItem(0);
                         break;
-                    case R.id.action_promotion:
-                        viewPager.setCurrentItem(1);
-                        break;
                     case R.id.action_shoppingCart:
                         viewPager.setCurrentItem(2);
-                        break;
-                    case R.id.action_notification:
-                        viewPager.setCurrentItem(3);
                         break;
                     case R.id.action_account:
                         viewPager.setCurrentItem(4);

@@ -54,11 +54,6 @@ public class Header extends AppCompatActivity {
                         break;
                     }
 
-                    case R.id.voice:
-                    {
-                        Toast.makeText(Header.this, "Voice Selected", Toast.LENGTH_SHORT).show();
-                        break;
-                    }
                     case R.id.account:
                     {
                         Intent intent = new Intent(Header.this, AccountPage.class);
@@ -66,20 +61,7 @@ public class Header extends AppCompatActivity {
                         Toast.makeText(Header.this, "Account Selected", Toast.LENGTH_SHORT).show();
                         break;
                     }
-                    case R.id.promotion:
-                    {
-                        Intent intent = new Intent(Header.this, PromotionActivity.class);
-                        startActivity(intent);
-                        Toast.makeText(Header.this, "Promotion Selected", Toast.LENGTH_SHORT).show();
-                        break;
-                    }
-                    case R.id.notification:
-                    {
-                        Intent intent = new Intent(Header.this, NotificationsPage.class);
-                        startActivity(intent);
-                        Toast.makeText(Header.this, "Notification Selected", Toast.LENGTH_SHORT).show();
-                        break;
-                    }
+
                     case R.id.contact:
                     {
                         Toast.makeText(Header.this, "Contact Selected", Toast.LENGTH_SHORT).show();

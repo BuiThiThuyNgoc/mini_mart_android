@@ -20,9 +20,6 @@
             android:name=".ProductPage"
             android:exported="false" />
         <activity
-            android:name=".PromotionActivity"
-            android:exported="false" />
-        <activity
             android:name=".ContinuesAccount"
             android:exported="false" />
         <activity
@@ -33,12 +30,6 @@
             android:exported="false" />
         <activity
             android:name=".OrderSuccessPage"
-            android:exported="false" />
-        <activity
-            android:name=".NotificationsPage"
-            android:exported="false" />
-        <activity
-            android:name=".ItemDiscount"
             android:exported="false" />
         <activity
             android:name=".Header"
