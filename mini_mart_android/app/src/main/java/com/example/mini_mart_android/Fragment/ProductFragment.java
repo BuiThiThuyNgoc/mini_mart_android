@@ -1,5 +1,6 @@
 package com.example.mini_mart_android.Fragment;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 
@@ -12,11 +13,13 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 
+import com.example.mini_mart_android.Adapter.CategoryAdapter;
 import com.example.mini_mart_android.Adapter.ProductAdapter;
 import com.example.mini_mart_android.CartPage;
 import com.example.mini_mart_android.Header;
 import com.example.mini_mart_android.R;
 import com.example.mini_mart_android.database.CallApi;
+import com.example.mini_mart_android.model.Category;
 import com.example.mini_mart_android.model.Product;
 
 import java.util.ArrayList;
@@ -32,8 +35,10 @@ public class ProductFragment extends Fragment {
     private View view;
     private ImageView IvSetting, imgView_cart;
     private ProductAdapter productAdapter;
+    private CategoryAdapter categoryAdapter;
     private RecyclerView recyclerView;
     private List<Product> productList = new ArrayList<>();
+    private List<Category> categoryList = new ArrayList<>();
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -49,7 +54,7 @@ public class ProductFragment extends Fragment {
         GridLayoutManager gridLayoutManager = new GridLayoutManager(getActivity(), 2);
         recyclerView.setLayoutManager(gridLayoutManager);
         recyclerView.setAdapter(productAdapter);
-        loadDataFromApi();
+        loadDataCategory(requireContext());
 
         imgView_cart.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -69,22 +74,26 @@ public class ProductFragment extends Fragment {
         });
         return view;
     }
-    private void loadDataFromApi() {
-        CallApi.apiProduct.callProducts("product").enqueue(new Callback<List<Product>>() {
+    private void loadDataCategory(Context context) {
+        CallApi.apiProduct.callCategories("categories").enqueue(new Callback<List<Category>>() {
             @Override
-            public void onResponse(Call<List<Product>> call, Response<List<Product>> response) {
-
+            public void onResponse(Call<List<Category>> call, Response<List<Category>> response) {
                 if (response.isSuccessful()) {
-                    productList.clear();
-                    productList.addAll(response.body());
-                    productAdapter.notifyDataSetChanged();
+                    categoryList.clear();
+                    categoryList.addAll(response.body());
+
+                    categoryAdapter = new CategoryAdapter(context); // Initialize categoryAdapter with the provided context
+                    recyclerView.setAdapter(categoryAdapter);
+
+                    categoryAdapter.setData(categoryList); // Update the data in the adapter
                 }
             }
 
             @Override
-            public void onFailure(Call<List<Product>> call, Throwable t) {
-
+            public void onFailure(Call<List<Category>> call, Throwable t) {
+                // Handle failure
             }
         });
     }
+
 }

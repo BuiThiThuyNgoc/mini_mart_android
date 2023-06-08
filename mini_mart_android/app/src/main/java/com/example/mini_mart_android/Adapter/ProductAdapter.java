@@ -41,6 +41,8 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ProductV
         if (product == null) {
             return;
         }
+        Uri imageUri = Uri.parse(product.getUrlImage());
+        holder.img_product.setImageURI(imageUri);
         holder.tv_productname.setText(product.getName());
         holder.tv_price_product.setText(String.valueOf(product.getPrice()));
 

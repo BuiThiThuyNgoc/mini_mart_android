@@ -22,9 +22,15 @@ public interface CallApi {
             .build()
             .create(CallApi.class);
 
+    CallApi apiCategory = new Retrofit.Builder()
+            .baseUrl("https://mini-mart-api-backup.onrender.com/")
+            .addConverterFactory(GsonConverterFactory.create(gson))
+            .build()
+            .create(CallApi.class);
 
     @GET("api/v1/products")
     Call<List<Product>> callProducts(@Query("product") String products);
+
     @GET("api/v1/categories")
     Call<List<Category>> callCategories(@Query("categories") String categories);
 }
