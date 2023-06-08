@@ -53,8 +53,14 @@
 
     //main
     <string name="minimart">MiniMart</string>
-    <string name="see">See</string>
 
+    //login
+    <string name="login">Login</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="register">Register</string>
+    <string name="forgot_password">Forgot password</string>
+    <string name="confirm_password">Confirm password</string>
 
     //order success page
     <string name="thank_you">Cảm ơn bạn</string>

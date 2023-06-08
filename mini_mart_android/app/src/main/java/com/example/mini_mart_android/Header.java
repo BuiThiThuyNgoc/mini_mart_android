@@ -61,6 +61,13 @@ public class Header extends AppCompatActivity {
                         Toast.makeText(Header.this, "Account Selected", Toast.LENGTH_SHORT).show();
                         break;
                     }
+                    case R.id.login:
+                    {
+                        Intent intent = new Intent(Header.this, LoginActivity.class);
+                        startActivity(intent);
+                        Toast.makeText(Header.this, "Login Selected", Toast.LENGTH_SHORT).show();
+                        break;
+                    }
 
                     case R.id.contact:
                     {
