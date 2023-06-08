@@ -68,10 +68,10 @@ public class MainActivity extends AppCompatActivity {
                         viewPager.setCurrentItem(0);
                         break;
                     case R.id.action_shoppingCart:
-                        viewPager.setCurrentItem(2);
+                        viewPager.setCurrentItem(1);
                         break;
                     case R.id.action_account:
-                        viewPager.setCurrentItem(4);
+                        viewPager.setCurrentItem(2);
                         break;
                 }
                 return true;

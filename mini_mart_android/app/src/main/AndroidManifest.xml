@@ -37,9 +37,6 @@
             android:name=".Header"
             android:exported="false" />
         <activity
-            android:name=".CategoryPage"
-            android:exported="false" />
-        <activity
             android:name=".CartPage"
             android:exported="false" />
         <activity

@@ -11,8 +11,6 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
 
-import com.example.mini_mart_android.AccountPage;
-import com.example.mini_mart_android.CategoryPage;
 import com.example.mini_mart_android.ContinuesAccount;
 import com.example.mini_mart_android.R;
 

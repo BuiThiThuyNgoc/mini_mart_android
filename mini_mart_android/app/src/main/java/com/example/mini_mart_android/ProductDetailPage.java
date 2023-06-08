@@ -35,7 +35,7 @@ public class ProductDetailPage extends AppCompatActivity {
         backProductDetail.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(ProductDetailPage.this, CategoryPage.class);
+                Intent intent = new Intent(ProductDetailPage.this, MainActivity.class);
                 startActivity(intent);
             }
         });
