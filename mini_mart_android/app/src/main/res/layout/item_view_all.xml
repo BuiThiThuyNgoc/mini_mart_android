@@ -18,7 +18,8 @@
             android:layout_width="130dp"
             android:layout_height="130dp"
             android:scaleType="centerCrop"
-            android:src="@drawable/ic_null_order" />
+            android:src="@drawable/ic_null_order"
+            />
         <TextView
             android:textStyle="bold"
             android:layout_marginBottom="5dp"

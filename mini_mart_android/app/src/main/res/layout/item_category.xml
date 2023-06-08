@@ -6,19 +6,24 @@
     android:layout_height="wrap_content"
     app:cardCornerRadius="15dp"
     android:layout_margin="5dp"
-    tools:context=".ItemDiscount">
+    >
     <LinearLayout
         android:layout_width="match_parent"
         android:orientation="vertical"
         android:layout_height="wrap_content"
         android:padding="5dp">
-        <com.makeramen.roundedimageview.RoundedImageView
-            android:id="@+id/img_pop"
-            android:layout_width="280dp"
-            android:layout_height="190dp"
-            app:riv_corner_radius="14dp"
-            android:scaleType="centerCrop"
-            android:src="@drawable/popimage"/>
+       <LinearLayout
+           android:layout_width="280dp"
+           android:layout_height="200dp">
+           <com.makeramen.roundedimageview.RoundedImageView
+               android:id="@+id/img_pop"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               app:riv_corner_radius="14dp"
+               android:scaleType="fitCenter"
+               android:adjustViewBounds="true"
+               android:src="@drawable/popimage"/>
+       </LinearLayout>
 
         <TextView
             android:textColor="@color/black"

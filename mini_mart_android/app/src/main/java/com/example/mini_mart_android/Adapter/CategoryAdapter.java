@@ -10,6 +10,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.bumptech.glide.Glide;
 import com.example.mini_mart_android.R;
 import com.example.mini_mart_android.model.Category;
 import java.util.List;
@@ -43,9 +44,10 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.Catego
             return;
         }
         holder.tv_namecategory.setText(category.getName());
-        Uri imageUri = Uri.parse(category.getUrlImage());
-        holder.img_category.setImageURI(imageUri);
         holder.tv_description.setText(category.getDescription());
+        Glide.with(context)
+                .load(category.getUrlImage())
+                .into(holder.img_category);
     }
 
     @Override
