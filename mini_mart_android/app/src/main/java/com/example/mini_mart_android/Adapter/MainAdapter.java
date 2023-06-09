@@ -8,6 +8,7 @@ import androidx.viewpager2.adapter.FragmentStateAdapter;
 
 import com.example.mini_mart_android.Fragment.AccountFragment;
 import com.example.mini_mart_android.Fragment.CartFragment;
+import com.example.mini_mart_android.Fragment.CategoryFragment;
 import com.example.mini_mart_android.Fragment.ProductFragment;
 
 public class MainAdapter extends FragmentStateAdapter {
@@ -22,7 +23,7 @@ public class MainAdapter extends FragmentStateAdapter {
     public Fragment createFragment(int position) {
         switch (position) {
             case 0:
-                return new ProductFragment();
+                return new CategoryFragment();
             case 1:
                 return new CartFragment();
             case 2:
