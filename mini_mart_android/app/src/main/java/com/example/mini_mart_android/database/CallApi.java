@@ -4,13 +4,14 @@ import com.example.mini_mart_android.model.Category;
 import com.example.mini_mart_android.model.Product;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
-import retrofit2.converter.gson.GsonConverterFactory;
 
 import java.util.List;
 
 import retrofit2.Call;
 import retrofit2.Retrofit;
+import retrofit2.converter.gson.GsonConverterFactory;
 import retrofit2.http.GET;
+import retrofit2.http.Path;
 import retrofit2.http.Query;
 
 public interface CallApi {
@@ -33,4 +34,7 @@ public interface CallApi {
 
     @GET("api/v1/categories")
     Call<List<Category>> callCategories(@Query("categories") String categories);
+
+    @GET("api/v1/category/{categoryId}/products")
+    Call<List<Product>> getProductsByCategoryId(@Path("categoryId") String id);
 }

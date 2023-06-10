@@ -1,7 +1,6 @@
 package com.example.mini_mart_android.Adapter;
 
 import android.content.Context;
-import android.net.Uri;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,9 +10,10 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.mini_mart_android.model.Product;
+import com.bumptech.glide.Glide;
 import com.example.mini_mart_android.R;
 import com.example.mini_mart_android.listener.ClickItemListener;
+import com.example.mini_mart_android.model.Product;
 
 import java.util.List;
 
@@ -41,11 +41,12 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ProductV
         if (product == null) {
             return;
         }
-        Uri imageUri = Uri.parse(product.getUrlImage());
-        holder.img_product.setImageURI(imageUri);
         holder.tv_productname.setText(product.getName());
         holder.tv_price_product.setText(String.valueOf(product.getPrice()));
 
+        Glide.with(holder.itemView)
+                .load(product.getUrlImage())
+                .into(holder.img_product);
     }
     @Override
     public int getItemCount() {
